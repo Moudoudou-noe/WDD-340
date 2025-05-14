@@ -1,6 +1,219 @@
-/******* Change Box Model ***************/
-*,
-*:before,
-*:after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #2C3E50;
+  background-color: #f9f9f9;
+}
+
+.arrier {
+  background-image: url('/images/site/checkerboard.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 1rem 6rem;
+  border: 4px solid blue;
+  padding: 1rem;
+}
+
+.site-header, .main-nav, .site-footer {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-link {
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #000001;
+  padding: 0.5rem 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #f4f4f4;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.vas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 1rem;
+  color: #42d1de;
+}
+
+.hero img {
+  flex: 1;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #23b9c4;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1aa1ab;
+}
+
+.dmc-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.dmc-section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+.dmc-info {
+  flex: 1;
+}
+
+/* --- Section commune entre upgrades et reviews --- */
+.upgrades-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Met .groupe10 et .reviews sur la même ligne */
+.groupe10, .reviews {
+  flex: 1 1 48%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Groupe 10 = grid pour les upgrades */
+.groupe10 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Images upgrades */
+.img-pros {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #42d1de;
+}
+
+.img-pros img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-pros a {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Liste reviews */
+.reviews ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Autres styles */
+footer {
+  margin-top: 2rem;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+.main-nav{
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .vas {
+    flex-direction: column;
+  }
+
+  .dmc-section {
+    flex-direction: column;
+  }
+
+  .upgrades-reviews {
+    flex-direction: column;
+  }
+
+  .groupe10 {
+    grid-template-columns: 1fr;
+  }
+
+  .groupe10, .reviews {
+    flex: 1 1 100%;
+  }
 }
