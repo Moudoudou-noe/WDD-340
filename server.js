@@ -16,7 +16,44 @@ const static = require("./routes/static")
  *************************/
 app.use(express.static("public")) // sert les fichiers statiques (css, js, images, etc.)
 app.set("view engine", "ejs") // configure EJS comme moteur de vues
-
+app.get('/custom', (req, res) => {
+  res.render('Custom-vehicle'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/sport', (req, res) => {
+  res.render('sport'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/suv', (req, res) => {
+  res.render('suv'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/truck', (req, res) => {
+  res.render('truck'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/errors', (req, res) => {
+  res.render('errors'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/sedam', (req, res) => {
+  res.render('sedam'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/batmobile', (req, res) => {
+  res.render('batmobile-custom'); 
+});
+app.use(express.static("public")) 
+app.set("view engine", "ejs")
+app.get('/surveillance', (req, res) => {
+  res.render('surveillance-van'); 
+});
 /* ***********************
  * Routes
  *************************/

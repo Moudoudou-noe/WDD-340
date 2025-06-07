@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        <div class="arrier">
+            <div class="content">
+                <%- include('partials/header') %>
+                    <%- include('partials/navigator') %>
+
+                        <main>
+                            <section class="hero">
+                                <h2>sport vehicle</h2>
+                                <div class="vehicle-grid">
+
+                                    <div class="vehicle">
+                                        <a href="#">
+                                            <img src="/images/vehicles/camaro.jpg" alt="chevy camaro">
+                                            <h3><a href="#">chevy camaro</a></h3>
+                                            <p>$25,000</p>
+                                        </a>
+                                    </div>
+
+
+                                    <div class="vehicle">
+                                        <a href="#">
+                                            <img src="/images/vehicles/adventador.jpg" alt="monster truck">
+                                            <h3><a href="#">lamborghini aventador</a></h3>
+                                            <p>$417,650</p>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </main>
+
+                        <%- include('partials/footers') %>
+            </div>
+        </div>
+    </body>
+
+</html>
