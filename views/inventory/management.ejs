@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+    <body>
+        <div class="arrier">
+            <div class="content">
+                <%- include('partials/header') %>
+                    <%- include('partials/navigator') %>
+
+                        <main>
+                            <h1>Inventory Management</h1>
+
+                            <% if (messages.success) { %>
+                                <div class="success">
+                                    <%= messages.success %>
+                                </div>
+                                <% } %>
+                                    <% if (messages.error) { %>
+                                        <div class="error">
+                                            <%= messages.error %>
+                                        </div>
+                                        <% } %>
+
+                                            <ul>
+                                                <li><a href="/inv/add-classification">➕ Add New Classification</a></li>
+                                                <li><a href="/inv/add-inventory">🚗 Add New Vehicle</a></li>
+                                            </ul>
+                        </main>
+
+                        <%- include('partials/footers') %>
+            </div>
+        </div>
+    </body>
+
+</html>

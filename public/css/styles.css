@@ -5,9 +5,11 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  color: #2C3E50;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
 .arrier {
@@ -237,6 +239,111 @@ footer {
   font-weight: bold;
   color: #004d40;
 }
+h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 2rem;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 10px;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #007b5e;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #005a43;
+}
+
+ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul a {
+  text-decoration: none;
+  color: #007b5e;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+ul a:hover {
+  text-decoration: underline;
+}
+
+/* Flash Messages */
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-left: 6px solid #28a745;
+  border-radius: 4px;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-left: 6px solid #dc3545;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {

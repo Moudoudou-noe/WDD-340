@@ -1,26 +1,12 @@
 // utilities/index.js
-function buildVehicleHTML(vehicle) {
-  const price = Number(vehicle.inv_price).toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
+exports.getNav = async function () {
+  // Exemple : tu peux construire la nav à partir des classifications
+  const invModel = require("../models/inventory-model");
+  const data = await invModel.getClassifications();
+  let nav = "<ul>";
+  data.rows.forEach(row => {
+    nav += `<li><a href="/inv/classification/${row.classification_id}">${row.classification_name}</a></li>`;
   });
-  const miles = Number(vehicle.inv_miles).toLocaleString();
-
-  return `
-    <div class="vehicle-detail">
-      <img src="${vehicle.inv_image}" alt="Image of ${vehicle.inv_make} ${vehicle.inv_model}">
-      <div class="vehicle-info">
-        <h2>${vehicle.inv_make} ${vehicle.inv_model} (${vehicle.inv_year})</h2>
-        <p><strong>Price:</strong> ${price}</p>
-        <p><strong>Miles:</strong> ${miles}</p>
-        <p>${vehicle.inv_description}</p>
-        <p><strong>Color:</strong> ${vehicle.inv_color}</p>
-      </div>
-    </div>
-  `;
-}
-
-module.exports = {
-  buildVehicleHTML,
-  // autres utilitaires...
+  nav += "</ul>";
+  return nav;
 };

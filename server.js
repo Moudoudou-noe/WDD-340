@@ -6,11 +6,16 @@
 /* ***********************
  * Require Statements
  *************************/
+const inventoryRoute = require("./routes/inventoryRoute");
+
+require("dotenv").config();
 const express = require("express")
 require("dotenv").config()
 const app = express()
 const static = require("./routes/static")
-
+const invRoute = require("./routes/inventoryRoute");
+const session = require("express-session");
+const flash = require("connect-flash");
 /* ***********************
  * Middleware
  *************************/
@@ -58,6 +63,20 @@ app.get('/surveillance', (req, res) => {
  * Routes
  *************************/
 app.use("/", static)
+
+
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.use(session({ secret: "secret", resave: false, saveUninitialized: true }));
+app.use(flash());
+
+// View engine
+app.set("view engine", "ejs");
+app.use("/inv", inventoryRoute);
+
+// Routes
+app.use("/inv", invRoute);
+
 
 /* ***********************
  * Local Server Information
