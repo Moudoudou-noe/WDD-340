@@ -34,6 +34,9 @@ body {
   background-color: #f4f4f4;
   text-align: center;
 }
+.bleu{
+  color: blue
+}
 
 .site-header {
   display: flex;
@@ -50,7 +53,13 @@ body {
   display: flex;
   justify-content: space-around;
   background-color: #000001;
-  padding: 0.5rem 0;
+  padding: -40rem;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+.main-nav li{
+  font-size: 2rem;
 }
 
 .main-nav a {
@@ -65,25 +74,30 @@ body {
 }
 
 .vas {
+  margin: 2px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  position: relative;
 }
 
 .hero-text {
-  flex: 1;
+  position: absolute;
+  left: 10px;
   padding: 1rem;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.7);
   color: #42d1de;
+  font-size: 1.5rem;
 }
 
 .hero img {
   flex: 1;
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
   border-radius: 8px;
+}
+h2{
+  font-size: 2.3rem;
 }
 
 button {
@@ -132,8 +146,8 @@ button:hover {
 .groupe10, .reviews {
   flex: 1 1 48%;
   background-color: #fff;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 2rem;
+  border-radius: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,9 +165,10 @@ button:hover {
   width: 100%;
   max-width: 300px;
   text-align: center;
-  padding: 1rem;
+  padding: 1.6rem;
   border: 1px solid #ccc;
   background-color: #42d1de;
+  position: relative;
 }
 .sect{
   display: grid;
@@ -170,6 +185,7 @@ button:hover {
 .img-pros img {
   max-width: 100%;
   height: auto;
+  position: relative;
 }
 
 .img-pros a {
